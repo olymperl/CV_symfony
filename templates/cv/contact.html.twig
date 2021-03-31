@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+    <h1>Contactez moi</h1>
+
+    {{form_start(formContact)}}
+    {{form_row(formContact.nom, {'label':'Nom','attr':{'placeholder':'Votre nom'}})}}
+    {{form_row(formContact.mail, {'label':'Mail','attr':{'placeholder':'Votre mail'}})}}
+    {{form_row(formContact.message, {'label':'Message','attr':{'placeholder':'Entrez votre message'}})}}
+    
+    <button type='submit' class='btn btn-sucess'> Valider </button>
+
+    {{form_end(formContact)}} 
+    <a href="/contacts_show">Messages envoyées</a>
+
+{% endblock %} 
